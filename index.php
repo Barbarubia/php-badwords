@@ -21,6 +21,9 @@
     <p><?php echo $trama; ?></p>
     <h3><?php echo "Lunghezza della trama: " . strlen($trama) . " caratteri." ?></h3>
     <hr>
+        
+    <!-- Istruzioni per inserire la parola da censurare -->
+    <p>Digitare <strong>?badword=</strong> alla fine dell'URL, seguito dalla stringa che si desidera censurare, e premere Invio.<br> La stringa digitata verrà sostituita da ***.</p>
 
     <!-- Ripetizione del paragrafo, con sostituzione della stringa censurata -->
     <p><?php echo str_replace($_GET["badword"], "***", $trama) ?></p>
