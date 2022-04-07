@@ -25,9 +25,14 @@
     <!-- Istruzioni per inserire la parola da censurare -->
     <p>Digitare <strong>?badword=</strong> alla fine dell'URL, seguito dalla stringa che si desidera censurare, e premere Invio.<br> La stringa digitata verrà sostituita da ***.</p>
 
+    <!-- Definizione in PHP della variabile stringa da censurare, ottenuta tramite parametro GET -->
+    <?php
+        $badword = $_GET["badword"];
+    ?>
+
     <!-- Ripetizione del paragrafo, con sostituzione della stringa censurata -->
-    <p><?php echo str_replace($_GET["badword"], "***", $trama) ?></p>
+    <p><?php echo str_replace($badword, "***", $trama) ?></p>
     <!-- Riconteggio dei caratteri dopo la sostituzione della stringa censurata -->
-    <h3><?php echo "Lunghezza della trama: " . strlen(str_replace($_GET["badword"], "***", $trama)) . " caratteri." ?></h3>
+    <h3><?php echo "Lunghezza della trama: " . strlen(str_replace($badword, "***", $trama)) . " caratteri." ?></h3>
 </body>
 </html>
