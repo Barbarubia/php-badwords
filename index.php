@@ -22,7 +22,9 @@
     <h3><?php echo "Lunghezza della trama: " . strlen($trama) . " caratteri." ?></h3>
     <hr>
 
-    <!-- Ripetizione della trama del manga, con sostituzione della parola censurata -->
+    <!-- Ripetizione del paragrafo, con sostituzione della stringa censurata -->
     <p><?php echo str_replace($_GET["badword"], "***", $trama) ?></p>
+    <!-- Riconteggio dei caratteri dopo la sostituzione della stringa censurata -->
+    <h3><?php echo "Lunghezza della trama: " . strlen(str_replace($_GET["badword"], "***", $trama)) . " caratteri." ?></h3>
 </body>
 </html>
