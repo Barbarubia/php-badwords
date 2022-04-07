@@ -20,5 +20,9 @@
     <h1><?php echo $titolo; ?></h1>
     <p><?php echo $trama; ?></p>
     <h3><?php echo "Lunghezza della trama: " . strlen($trama) . " caratteri." ?></h3>
+    <hr>
+
+    <!-- Ripetizione della trama del manga, con sostituzione della parola censurata -->
+    <p><?php echo str_replace($_GET["badword"], "***", $trama) ?></p>
 </body>
 </html>
