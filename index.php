@@ -19,5 +19,6 @@
     <!-- Stampa in HTML delle variabili PHP "titolo", "trama" e conteggio dei caratteri -->
     <h1><?php echo $titolo; ?></h1>
     <p><?php echo $trama; ?></p>
+    <h3><?php echo "Lunghezza della trama: " . strlen($trama) . " caratteri." ?></h3>
 </body>
 </html>
