@@ -28,7 +28,7 @@
     <!-- Definizione in PHP della variabile stringa da censurare, ottenuta tramite parametro GET e del paragrafo ottenuto sostituendo la stringa da censurare -->
     <?php
         $badword = $_GET["badword"];
-        $trama_senza_badword = str_replace($badword, "***", $trama);
+        $trama_senza_badword = str_ireplace($badword, "***", $trama);
     ?>
 
     <!-- Ripetizione del paragrafo, con sostituzione della stringa censurata -->
